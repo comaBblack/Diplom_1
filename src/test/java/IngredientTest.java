@@ -1,3 +1,4 @@
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -24,7 +25,11 @@ public class IngredientTest {
     public static Object[][] getIngredients() {
         return new Object[][]{
                 {SAUCE, "sjhf", 500f},
-                {FILLING, "sdkfbsdkf", 700.10f}
+                {FILLING, "sdkfbsdkf", 700.10f},
+                {FILLING,"✌️", -99999999F},
+                {SAUCE,"",99999999F},
+                {FILLING,null,0},
+                {SAUCE,RandomStringUtils.randomAlphabetic(100),0.1F},
         };
     }
 

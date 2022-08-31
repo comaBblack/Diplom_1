@@ -50,7 +50,7 @@ public class BurgerTest {
         burger.removeIngredient(0);
         int expectedSize = 2;
         int actualSize = burger.ingredients.size();
-        assertThat("List should be empty", expectedSize, equalTo(actualSize));
+        assertThat("List should be not empty", expectedSize, equalTo(actualSize));
     }
 
     @Test
